@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta name="X-UA-Compatible" content="IE=8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<title>投你索好</title>
+	<link href="./static/css/base.css" type="text/css" rel="stylesheet" charset="utf-8" />
+	<script type="text/javascript" src="./script/jquery.js"></script>
+</head>
+<body>
+	<div class="bd">
+		<div class="header">
+			<a href="#" class="help" title="帮助"></a>
+            <a href="#" id="esc" title="退出">退出</a>
+            <div class="logo">
+				<h1><a href="#">投你索好</a></h1>
+			</div>
+			<a class="logo"></a>
+			
+			<div class="nav">
+				<ul>
+					<li class="n1"><a href="#"></a></li>
+					<li class="n2"><a href="#" class="on"></a></li>
+					<li class="n3"><a href="#"></a></li>
+					<li class="n4"><a href="#"></a></li>
+					<li class="n5"><a href="#"></a></li>
+					<li class="n6"><a href="#"></a></li>
+					<li class="n7"><a href="#"></a></li>
+					<li class="n8"><a href="#"></a></li>
+				</ul>
+			</div>
+			<div class="clear"></div>
+			<div class="wrapper">
+				<h1 class="mTitle">实时播报</h1>
+				<dl class="newslist">
+					<dt class="title">451整型已渐成为欧洲杯主流放弃保守攻守已愈加平衡</dt>
+					<dd class="pic"><img src="images/news1.jpg"/></dd>
+					<dd class="desc">徐伦分享了2008～2010年末对马化腾的采访、未在媒体公开的部分：你如何看中国互联网未来格局？如果今天你才创业，会做什么切入中国互联网？现在的腾讯可能遇到的最大挑战是什么？如何开放腾讯平台？腾讯是为了卡位而涉足几乎所有互联网产品... <a href="./欧锦直击-内容页.html">查看详细 &gt;&gt;</a></dd>
+					<dd class="dateline">2012-06-22</dd>
+					<div class="clear"></div>
+				</dl>
+				<dl class="newslist">
+					<dd class="pic"><img src="images/news1.jpg"/></dd>
+					<dt class="title">451整型已渐成为欧洲杯主流放弃保守攻守已愈加平衡</dt>
+					
+					<dd class="desc">徐伦分享了2008～2010年末对马化腾的采访、未在媒体公开的部分：你如何看中国互联网未来格局？如果今天你才创业，会做什么切入中国互联网？现在的腾讯可能遇到的最大挑战是什么？如何开放腾讯平台？腾讯是为了卡位而涉足几乎所有互联网产品... <a href="./欧锦直击-内容页.html">查看详细 &gt;&gt;</a></dd>
+					<dd class="dateline">2012-06-22</dd>
+					<div class="clear"></div>
+				</dl>
+				<div class="pager">
+					<a href="#">首页</a>&nbsp;&nbsp;
+					<a href="#">上一页</a>&nbsp;&nbsp;
+					<a href="#">下一页</a>&nbsp;&nbsp;
+					<a href="#">尾页</a>&nbsp;&nbsp;
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>		
+	</div>
+<script type="text/javascript">
+$(document).ready(function(){
+	$(".newslist .title").click(function(){
+		$(".newslistAct").removeClass("newslistAct").addClass("newslist");
+		$(this).parent().removeClass("newslist").addClass("newslistAct");
+	});
+});
+</script>
+</body>
+</html>

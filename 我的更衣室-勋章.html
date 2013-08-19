@@ -1,0 +1,134 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta name="X-UA-Compatible" content="IE=8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<title>投你索好</title>
+	<link href="./static/css/base.css" type="text/css" rel="stylesheet" charset="utf-8" />
+	<script type="text/javascript" src="./script/jquery.js"></script>
+	<script type="text/javascript" src="./script/common.js"></script>
+    <script>
+$(function(){
+
+            var $destiny = $(".uinfo .medal");
+            var imgSrc = getCookie("username");
+
+            if(imgSrc !=null ){
+                $("<img>").attr("src",imgSrc).removeAttr("width").removeAttr("height").appendTo($destiny);
+            }
+
+            var medalsData = {"medals": [{"medalId": 11,"medalName": "Mr.Wrong","text": "输掉所有"},{"medalId": 7,"medalName": "战况小晒","text": "初次分享微博"},{"medalId": 2,"medalName": "绿茵豪门","text": "积累1000000SP"},{"medalId": 5,"medalName": "帽子戏法","text": "连胜三场"},{"medalId": 3,"medalName": "红牌警告","text": "破产，积分归零"}]};
+            $.each(medalsData.medals,function(i,value){
+                        var num = value["medalId"];
+                        var imgSrc = $("#scroll img").eq(num).attr("src");
+                        imgSrc = imgSrc.replace("黑白","彩色");
+                        $("#scroll img").eq(num).attr("src",imgSrc)
+                                .parent("a").addClass("checked");
+
+            });
+            var imgPath;
+            $("#scroll .checked").each(function(){
+                $(this).bind("click",function(e){
+                    $(".dialog-check").show();
+                    imgPath = $(this).find("img").attr("src");
+
+                    e.preventDefault();
+                })
+            });
+            $(".dialog-check .btn-d:first").bind("click",function(e){
+                $destiny.html("");
+                $("<img>").attr("src",imgPath).removeAttr("width").removeAttr("height").appendTo($destiny);
+                setCookie("username",imgPath);
+                $(this).closest(".dialog").hide();
+                e.preventDefault();
+            });
+            $(".dialog-check .btn-d:last").bind("click",function(e){
+                $(this).closest(".dialog").hide();
+                e.preventDefault();
+            });
+})
+
+    </script>
+</head>
+<body>
+	<div class="bd">
+		<div class="header">
+            <a href="#" class="help" title="帮助"></a>
+            <a href="#" id="esc" title="退出">退出</a>
+            <div class="logo">
+                <h1><a href="#">投你索好</a></h1>
+            </div>
+			<a class="logo"></a>
+			
+			<div class="nav">
+				<ul>
+					<li class="n1"><a href="#"></a></li>
+					<li class="n2"><a href="#"></a></li>
+					<li class="n3"><a href="#"></a></li>
+					<li class="n4"><a href="#"></a></li>
+					<li class="n5"><a href="#" class="on"></a></li>
+					<li class="n6"><a href="#"></a></li>
+					<li class="n7"><a href="#"></a></li>
+					<li class="n8"><a href="#"></a></li>
+				</ul>
+			</div>
+			<div class="clear"></div>
+			<div class="wrapper page-medals">
+				<h1 class="mTitle">我的帐户</h1>
+				<div class="side200">
+					<ul class="ulinks">
+						<li><a href="#">个人信息</a></li>
+						<li><a href="#">排行榜</a></li>
+						<li><a href="#">积分记录</a></li>
+						<li class="active"><a href="#">我的勋章</a></li>
+					</ul>
+				</div>
+				<div class="body">
+					<div class="uinfo">
+						<a href="#" class="avator"><img src="./images/avator.png"/></a>
+						<a href="#" class="name sex1">艾玛格</a>
+						<a href="#" class="level level_3">6</a>
+						<a href="#" class="sp">20000 SP</a>
+						<a href="#" class="medal medal_1" title="勋章"></a>
+					</div>
+					<div class="ubody rd5 opt9">
+						<h2 class="title">我的勋章</h2>
+						<ul class="rlist" id="scroll">
+							<li class="qx"><a href="#"><img src="static/img/勋章/黑白/1.png" class="qximg"/></a></li>
+							<li class="qx"><a href="#"><img src="static/img/勋章/黑白/2.png" class="qximg"/></a></li>
+							<li class="qx"><a href="#"><img src="static/img/勋章/黑白/3.png" class="qximg"/></a></li>
+							<li class="qx"><a href="#"><img src="static/img/勋章/黑白/4.png" class="qximg"/></a></li>
+							<li class="qx"><a href="#"><img src="static/img/勋章/黑白/5.png" class="qximg"/></a></li>
+							<li class="qx"><a href="#"><img src="static/img/勋章/黑白/6.png" class="qximg"/></a></li>
+							<li class="qx"><a href="#"><img src="static/img/勋章/黑白/7.png" class="qximg"/></a></li>
+							<li class="qx"><a href="#"><img src="static/img/勋章/黑白/8.png" class="qximg"/></a></li>
+							<li class="qx"><a href="#"><img src="static/img/勋章/黑白/9.png" class="qximg"/></a></li>
+							<li class="qx"><a href="#"><img src="static/img/勋章/黑白/10.png" class="qximg"/></a></li>
+							<li class="qx"><a href="#"><img src="static/img/勋章/黑白/11.png" class="qximg"/></a></li>
+							<li class="qx"><a href="#"><img src="static/img/勋章/黑白/12.png" class="qximg"/></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+        <div style="display: none;" class="dialog dialog-check check2">
+            <a href="#" class="ui-close" style="display: none;">close</a>
+            <div class="title">
+                <h3></h3>
+            </div>
+            <div class="main">
+                <p>您已获得“投你索好”勋章，请到勋章馆领取</p>
+            </div>
+            <div class="tail">
+                <ul>
+                    <li><a class="btn-d" href="#">领取</a></li>
+                    <li><a class="btn-d" href="#">取消</a></li>
+                </ul>
+            </div>
+        </div>
+	</div>
+
+</body>
+</html>

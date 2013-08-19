@@ -1,0 +1,264 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta name="X-UA-Compatible" content="IE=8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>赛事竞猜-胜平负</title>
+    <link href="./static/css/base.css" type="text/css" rel="stylesheet" charset="utf-8" />
+    <script type="text/javascript" src="./script/jquery.js"></script>
+    <script type="text/javascript" src="./script/common.js"></script>
+</head>
+<body>
+<div class="bd">
+    <div class="header">
+        <a href="#" class="help" title="帮助"></a>
+            <a href="#" id="esc" title="退出">退出</a>
+            <div class="logo">
+            <h1><a href="#">投你索好</a></h1>
+        </div>
+        <a class="logo"></a>
+
+        <div class="nav">
+            <ul>
+                <li class="n1"><a href="#"></a></li>
+                <li class="n2"><a href="#"></a></li>
+                <li class="n3"><a href="#"></a></li>
+                <li class="n4"><a href="#" class="on"></a></li>
+                <li class="n5"><a href="#"></a></li>
+                <li class="n6"><a href="#"></a></li>
+                <li class="n7"><a href="#"></a></li>
+                <li class="n8"><a href="#"></a></li>
+            </ul>
+        </div>
+        <div class="clear"></div>
+
+    </div>
+    <div class="wrapper  page-ssjc page-spf">
+       <input type="hidden" value="1" id="doubleScore"><!------0:大小球    1：先进球                        ---->
+        <h1 class="mTitle">赛事竞猜 <a href="#" class="btn-back">返回</a></h1>
+        <div class="left">
+            <div class="team-vs">
+                <a href="#" class="double-scroe">
+                    <b>双倍积分</b>
+                    大小球
+                </a>
+                <div class="fn-left state">
+                    <input type="hidden" value="<%=aInfo.AgainstID %>" id="AgainstID" />
+                    <input type="hidden" value="" id="Status" />
+                    <input type="hidden" value="" id="TeamID" />
+                    <!------
+                     <img src="<%=main.Team_Flag %>" alt="<%=aInfo.TeamMain_Name%>" teamid="<%= main.Team_ID%>" />
+                        ---->
+                    <img src="images/team/5050/ita.png" alt="<%=aInfo.TeamMain_Name%>" teamid="<%= main.Team_ID%>">
+                    <p id="team_name_1">俄罗斯联邦</p>
+                </div>
+                <div class="fn-right state">
+                    <img src="images/team/5050/ukr.png" alt="<%=aInfo.TeamMain_Name%>" teamid="<%= main.Team_ID%>">
+                    <p id="team_name_2">捷克共和国</p>
+                </div>
+                <div class="score">20:45</div>
+            </div>
+            <div class="team-bet">
+                <ul>
+                    <li><a href="#" class="btn-a">胜</a></li>
+                    <li><a href="#" class="btn-a">平</a></li>
+                    <li><a href="#" class="btn-a">胜</a></li>
+                </ul>
+                <div class="add">
+                    <div class="num">
+                        <label>-</label>
+                        <span contenteditable="true">0</span>
+                        <label>+</label>
+                    </div>
+                    <a href="#" class="btn-b" title="请先选择队伍,决定投注积分后在点击投注按钮"></a>
+                </div>
+                <div class="total"><img src="static/img/gold.png"><b class="totalPrice">666666</b>
+            </div>
+                </div>
+        </div>
+        <div class="right">
+            <div class="model-a">
+                <div class="title">
+                    <span><a href="http://weibo.com/u/2718394531">去保罗的微博看看 >></a></span>
+                    <h3>保罗大预测</h3>
+                </div>
+                <div class="main">
+                    <img src="static/img/baoluo.jpg">
+                    <p>无从选择？选择随机投注，让保罗大仙为你指引方向<br>
+                        固定投注积分1000SP<br>
+                        双倍回报<a href="#" class="btn-c"></a><br>
+                        淘汰赛开始  投注无上限
+                    </p>
+                </div>
+            </div>
+            <div class="model-b">
+                <div class="title">
+                    <h3>历史战绩</h3>
+                </div>
+                <div class="main">
+                    <table>
+                        <tr>
+                            <th>赛事</th>
+                            <th>时间</th>
+                            <th>球队</th>
+                            <th>比分</th>
+                        </tr>
+                        <tr>
+                            <td>欧洲杯</td>
+                            <td>19/06/1996</td>
+                            <td>俄罗斯VS捷克</td>
+                            <td>3:2</td>
+                        </tr>
+                        <tr>
+                            <td>欧洲杯</td>
+                            <td>19/06/1996</td>
+                            <td>俄罗斯VS捷克</td>
+                            <td>3:2</td>
+                        </tr>
+                        <tr>
+                            <td>欧洲杯</td>
+                            <td>19/06/1996</td>
+                            <td>俄罗斯VS捷克</td>
+                            <td>3:2</td>
+                        </tr>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mask" style="display: none"></div>
+    <div class="dialog dialog-a" style="display: none">
+        <a href="#" class="ui-close">close</a>
+        <div class="main">
+            <img src="static/img/icons/icon_country_a.png" class="fn-left">
+            <img src="static/img/icons/icon_country_b.png" class="fn-right">
+            <h4>费罗茨毒夫<br>费罗茨毒夫市政球场</h4>
+            <div class="team-bet">
+                <ul>
+                    <li><a href="#" class="btn-a-s">胜</a></li>
+                    <li><a href="#" class="btn-a-s">平</a></li>
+                    <li><a href="#" class="btn-a-s">胜</a></li>
+                </ul>
+                <div class="add">
+                    <div class="num">
+                        <label>-</label>
+                        <span>0</span>
+                        <label>+</label>
+                    </div>
+                    <a href="#" class="btn-b-s"></a>
+                </div>
+            </div>
+        </div>
+        <div class="tail">
+            <h3>胜负平竞猜</h3>
+            <p>输入S币，选择获胜球队，点击投注</p>
+        </div>
+    </div>
+    <div class="dialog dialog-b dialog-check" style="display: none;">
+        <div class="title">
+            <h3>预测获胜球队</h3>
+            <span><img src=""></span>
+        </div>
+        <div class="main">
+            <p><b>注入积分</b><img src="static/img/gold2.png"> <span>2500S</span></p>
+        </div>
+        <div class="tail">
+            <ul>
+                <li><a href="#" class="btn-d first">确定</a></li>
+                <li><a href="#" class="btn-d last">取消</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="dialog dialog-check dialog-c-1" style="display: none;">
+        <img src="static/img/baoluo.png" class="img-head">
+        <div class="title">
+            <h3></h3>
+        </div>
+        <div class="main">
+            <p>“追随保罗，随机投注？”</p>
+        </div>
+        <div class="tail">
+            <ul>
+                <li><a href="#" class="btn-d first">确定</a></li>
+                <li><a href="#" class="btn-d last">取消</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="dialog dialog-check dialog-c-2" style="display: none;">
+        <img src="static/img/baoluo.png" class="img-head">
+        <div class="title">
+            <h3>预测获胜球队</h3>
+            <span><img src="static/img/icons/icon_country_b_s.png"></span>
+        </div>
+        <div class="main">
+            <p><b>注入积分</b><img src="static/img/gold2.png"> <span>1000 S</span></p>
+        </div>
+        <div class="tail">
+            <ul>
+                <li><a href="#" class="btn-d">投注</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="dialog dialog-check" id="dialog-c-alert" style="display: none;">
+        <div class="title">
+            <h3></h3>
+        </div>
+        <div class="main">
+            <p>您的积分少于1000S,不能投注！</p>
+        </div>
+        <div class="tail">
+            <ul>
+                <li><a href="#" class="btn-d last">知道了</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="dialog dialog-d" style="display: none;">
+        <div class="title">
+            <h3>分享新浪微博</h3>
+            <a href="#" class="ui-close">close</a>
+        </div>
+        <div class="main">
+            <p></p>
+            <img src="static/img/footfall-star.jpg">
+        </div>
+        <div class="tail">
+            <a href="#" class="btn-e">分享</a>
+        </div>
+    </div>
+    <div class="dialog dialog-check dialog-d-2" style="display: none;">
+        <a class="ui-close" href="#">close</a>
+        <div class="title">
+            <h3></h3>
+        </div>
+        <div class="main">
+            <p>您已获得“投你索好”勋章，请到勋章馆领取</p>
+        </div>
+        <div class="tail">
+            <ul>
+                <li><a href="#" class="btn-d">领取</a></li>
+                <li><a href="#" class="btn-d">取消</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="dialog dialog-check dialog-licence" style="display: noneY;">
+        <a class="ui-close" href="#">close</a>
+        <div class="title">
+            <h3>为了保证您可以正常获取积分排名向对应的礼品，请绑定真实有效的身份证号，每个账户只能对应一个身份证号。</h3>
+        </div>
+        <div class="main">
+            <ul>
+                <li><label>姓名：</label><input type="text" id="name"></li>
+                <li><label>身份证：</label><input type="text" id="idcard"></li>
+            </ul>
+        </div>
+        <div class="tail">
+            <ul>
+                <li><a href="#" class="btn-d">确认</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>

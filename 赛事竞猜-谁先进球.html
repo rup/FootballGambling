@@ -1,0 +1,176 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta name="X-UA-Compatible" content="IE=8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>赛事竞猜-谁先进球</title>
+    <link href="./static/css/base.css" type="text/css" rel="stylesheet" charset="utf-8" />
+    <script type="text/javascript" src="./script/jquery.js"></script>
+    <script type="text/javascript" src="./script/common.js"></script>
+</head>
+<body>
+<div class="bd">
+
+    <div class="header">
+        <a href="#" class="help" title="帮助"></a>
+            <a href="#" id="esc" title="退出">退出</a>
+            <div class="logo">
+            <h1><a href="#">投你索好</a></h1>
+        </div>
+        <a class="logo"></a>
+
+        <div class="nav">
+            <ul>
+                <li class="n1"><a href="#"></a></li>
+                <li class="n2"><a href="#"></a></li>
+                <li class="n3"><a href="#"></a></li>
+                <li class="n4"><a href="#" class="on"></a></li>
+                <li class="n5"><a href="#"></a></li>
+                <li class="n6"><a href="#"></a></li>
+                <li class="n7"><a href="#"></a></li>
+                <li class="n8"><a href="#"></a></li>
+            </ul>
+        </div>
+        <div class="clear"></div>
+
+    </div>
+    <div class="wrapper  page-ssjc page-sxjq">
+        <h1 class="mTitle">赛事竞猜 <a href="#" class="btn-back">返回</a></h1>
+        <div class="left">
+            <div class="team-vs">
+                <div class="fn-left state">
+                    <input type="hidden" value="" id="Status" />
+                    <input type="hidden" value="" id="TeamID" />
+                    <img src="static/img/icons/icon_country_a.png"/>
+                    <p>俄罗斯联邦</p>
+                </div>
+                <div class="fn-right state">
+                    <img src="static/img/icons/icon_country_b.png">
+                    <p>捷克共和国</p>
+                </div>
+                <div class="score">20:45</div>
+            </div>
+            <div class="team-bet">
+                <div class="bar">
+                    <ul>
+                        <li><a class="btn-daxiao first" href="#"></a></li>
+                        <li><a class="btn-daxiao last" href="#"></a></li>
+                    </ul>
+                </div>
+                <div class="banner">
+                    <img src="static/img/betfirst.png">
+                </div>
+                <div class="add">
+                    <div class="num">
+                        <label>-</label>
+                        <span contenteditable="true">0</span>
+                        <label>+</label>
+                    </div>
+                    <a href="#" class="btn-b"></a>
+                    <img src="static/img/gold.png"><b class="totalPrice">666666</b>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="model-a">
+                <div class="title">
+                    <span><a href="#">去保罗的微博看看 >></a></span>
+                    <h3>保罗大预测</h3>
+                </div>
+                <div class="main clearfix">
+                    <img src="static/img/baoluo.jpg">
+                    <p>无从选择？选择随机投注，让保罗大仙为你指引方向<br>
+                        现在就去关注<br>
+                        保罗微博
+                    </p>
+                </div>
+            </div>
+            <div class="model-b">
+                <div class="title">
+                    <h3>历史战绩</h3>
+                </div>
+                <div class="main">
+                    <table>
+                        <tr>
+                            <th>赛事</th>
+                            <th>时间</th>
+                            <th>球队</th>
+                            <th>比分</th>
+                        </tr>
+                        <tr>
+                            <td>欧洲杯</td>
+                            <td>19/06/1996</td>
+                            <td>俄罗斯VS捷克</td>
+                            <td>3:2</td>
+                        </tr>
+                        <tr>
+                            <td>欧洲杯</td>
+                            <td>19/06/1996</td>
+                            <td>俄罗斯VS捷克</td>
+                            <td>3:2</td>
+                        </tr>
+                        <tr>
+                            <td>欧洲杯</td>
+                            <td>19/06/1996</td>
+                            <td>俄罗斯VS捷克</td>
+                            <td>3:2</td>
+                        </tr>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mask" style="display: none"></div>
+    <div class="dialog dialog-daxiao" style="display: none;">
+        <div class="title">
+            <a href="#" class="ui-close">close</a>
+        </div>
+        <div class="main">
+            <h4>费罗茨毒夫<br>费罗茨毒夫市政球场</h4>
+            <div class="bar">
+                <ul>
+                    <li><a href="#" class="btn-daxiao first"></a></li>
+                    <li><a href="#" class="btn-daxiao last"></a></li>
+                </ul>
+            </div>
+            <div class="banner">
+                <img src="static/img/betfirst.png">
+            </div>
+            <div class="team-bet">
+                <div class="add">
+                    <div class="num">
+                        <label>-</label>
+                        <span>0</span>
+                        <label>+</label>
+                    </div>
+                    <a class="btn-b-s" href="#"></a>
+                    <img src="static/img/gold.png"><b class="totalPrice">666666</b>
+                </div>
+
+            </div>
+        </div>
+        <div class="tail">
+            <h4>谁先进球</h4>
+            <p> 竞猜第一个进球的球队，选择按钮，点亮球队足球即可。</p>
+        </div>
+    </div>
+    <div class="dialog dialog-b dialog-check" style="display: none;">
+        <div class="title">
+            <h3>预测谁先进球</h3>
+            <span><img src="static/img/icons/icon_country_b_s.png"></span>
+        </div>
+        <div class="main">
+            <p><b>注入积分</b><img src="static/img/gold2.png"> <span>2500S</span></p>
+        </div>
+        <div class="tail">
+            <ul>
+                <li><a href="#" class="btn-d first">确定</a></li>
+                <li><a href="#" class="btn-d last">取消</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>

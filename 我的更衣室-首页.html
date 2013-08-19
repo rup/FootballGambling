@@ -1,0 +1,158 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta name="X-UA-Compatible" content="IE=8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<title>投你索好</title>
+	<link href="./static/css/base.css" type="text/css" rel="stylesheet" charset="utf-8" />
+	<script type="text/javascript" src="./script/jquery.js"></script>
+    <script type="text/javascript" src="./script/common.js"></script>
+    <script>
+        $(function(){
+
+            var $destiny = $(".uinfo .medal");
+            var imgSrc = getCookie("username");
+
+            if(imgSrc !=null ){
+                $("<img>").attr("src",imgSrc).removeAttr("width").removeAttr("height").appendTo($destiny);
+            }
+        });
+    </script>
+</head>
+<body>
+	<div class="bd">
+		<div class="header">
+			<a href="#" class="help" title="帮助"></a>
+            <a href="#" id="esc" title="退出">退出</a>
+            <div class="logo">
+				<h1><a href="#">投你索好</a></h1>
+			</div>
+			<a class="logo"></a>
+			
+			<div class="nav">
+				<ul>
+					<li class="n1"><a href="#"></a></li>
+					<li class="n2"><a href="#"></a></li>
+					<li class="n3"><a href="#"></a></li>
+					<li class="n4"><a href="#"></a></li>
+					<li class="n5"><a href="#" class="on"></a></li>
+					<li class="n6"><a href="#"></a></li>
+					<li class="n7"><a href="#"></a></li>
+					<li class="n8"><a href="#"></a></li>
+				</ul>
+			</div>
+			<div class="clear"></div>
+		</div>
+        <div class="wrapper page-gys">
+            <h1 class="mTitle">我的帐户</h1>
+            <div class="side200">
+                <ul class="ulinks">
+                    <li class="active"><a href="#">个人信息</a></li>
+                    <li><a href="#">排行榜</a></li>
+                    <li><a href="#">积分记录</a></li>
+                    <li><a href="#">我的勋章</a></li>
+                </ul>
+            </div>
+            <div class="body">
+                <div class="uinfo">
+                    <a href="#" class="avator"><img src="./images/avator.png"/></a>
+                    <a href="#" class="name sex1">艾玛格</a>
+                    <a href="#" class="level level_3">6</a>
+                    <a href="#" class="sp">20000 SP</a>
+                    <a href="#" class="medal medal_1" title="勋章"></a>
+                </div>
+                <div class="ubody rd5 opt9">
+                    <h2 class="title">最近战况</h2>
+                    <div class="flist scroll" id="scroll">
+                        <dl>
+                            <dt>2012-06-08 星期五</dt>
+                            <dd>
+                                <div class="t1 team1">俄罗斯联邦<br>
+                                    <img src="static/img/icons/team/t1.png" />
+                                </div>
+                                <div class="t2 team2">捷克共和国<br>
+                                    <img src="static/img/icons/team/t1.png" />
+                                </div>
+									<span class="vs">
+										VS <br/>
+										<font class="c9">20:45</font>
+									</span>
+                                <span class="result">6:4<br>预测 俄罗斯联邦 胜</span>
+                                <span class="sp">+500SP</span>
+
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>2012-06-08 星期五</dt>
+                            <dd>
+                                <div class="t1 team1">俄罗斯联邦<br>
+                                    <img src="static/img/icons/team/t1.png" />
+                                </div>
+                                <div class="t2 team2">捷克共和国<br>
+                                    <img src="static/img/icons/team/t1.png" />
+                                </div>
+									<span class="vs">
+										VS <br/>
+										<font class="c9">20:45</font>
+									</span>
+                                <span class="result">比分6:4胜</span>
+                                <span class="sp">+500SP</span>
+
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>2012-06-08 星期五</dt>
+                            <dd>
+                                <div class="t1 team1">俄罗斯联邦<br>
+                                    <img src="static/img/icons/team/t1.png" />
+                                </div>
+                                <div class="t2 team2">捷克共和国<br>
+                                    <img src="static/img/icons/team/t1.png" />
+                                </div>
+									<span class="vs">
+										VS <br/>
+										<font class="c9">20:45</font>
+									</span>
+                                <span class="result">比分6:4胜</span>
+                                <span class="sp">+500SP</span>
+
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>2012-06-08 星期五</dt>
+                            <dd>
+                                <div class="t1 team1">俄罗斯联邦<br>
+                                    <img src="static/img/icons/team/t1.png" />
+                                </div>
+                                <div class="t2 team2">捷克共和国<br>
+                                    <img src="static/img/icons/team/t1.png" />
+                                </div>
+									<span class="vs">
+										VS <br/>
+										<font class="c9">20:45</font>
+									</span>
+                                <span class="result">比分6:4胜</span>
+                                <span class="sp">+500SP</span>
+
+                            </dd>
+                        </dl>
+
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+	</div>
+    <script>
+        var te = new scroller(
+                {
+                    id:"scroll",
+                    moveSize:1
+                }
+        );
+
+    </script>
+</body>
+</html>

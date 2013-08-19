@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta name="X-UA-Compatible" content="IE=8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>投你索好</title>
+<link href="./static/css/base.css" type="text/css" rel="stylesheet"
+	charset="utf-8" />
+<script type="text/javascript" src="./script/jquery.js"></script>
+</head>
+<body>
+	<div class="bd">
+		<div class="header">
+			<a href="#" class="help" title="帮助"></a>
+            <a href="#" id="esc" title="退出">退出</a>
+            <div class="logo">
+				<h1><a href="#">投你索好</a></h1>
+			</div>
+			<a class="logo"></a>
+
+			<div class="nav">
+				<ul>
+					<li class="n1"><a href="#" class="on"></a></li>
+					<li class="n2"><a href="#"></a></li>
+					<li class="n3"><a href="#"></a></li>
+					<li class="n4"><a href="#"></a></li>
+					<li class="n5"><a href="#"></a></li>
+					<li class="n6"><a href="#"></a></li>
+					<li class="n7"><a href="#"></a></li>
+					<li class="n8"><a href="#"></a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="clear"></div>
+		<div class="wrapper">
+			<h1 class="mTitle">对阵图</h1>
+			<div class="side200">
+				<ul class="ulinks">
+					<li><a href="./对阵图-参赛球队.html">参赛球队</a></li>
+						<li><a href="./对阵图-对阵球队.html">对阵图</a></li>
+						<li><a href="./对阵图-小组积分.html">小组积分</a></li>
+						<li class="active"><a href="./对阵图-对阵表.html">淘汰赛对阵图</a></li>
+				</ul>
+			</div>
+			<div class="body f_bg">
+				<a href="#" class="f01">EF01</a>
+				<a href="#" class="f02">EF02</a>
+				<a href="#" class="f03">EF03</a>
+				<a href="#" class="f04">EF04</a>
+				<a href="#" class="f05">EF05</a>
+				<a href="#" class="f06">EF06</a>
+				<a href="#" class="f07">EF07</a>
+				<a href="#" class="f08">EF08</a>
+				<a href="#" class="f09">EF09</a>
+				<a href="#" class="f10">EF10</a>
+				<a href="#" class="f11">EF11</a>
+				<a href="#" class="f12">EF12</a>
+				<a href="#" class="f13">EF13</a>
+				<a href="#" class="f14">EF14</a>
+				<a href="#" class="f15">EF15</a>				
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('.body').find('.teamGroupBody').slice(0, 1).show();
+			$('.teamGroupTab a').click(function(){
+				$('.teamGroupTab a').removeClass('active');
+				$(this).addClass('active');
+				
+				$('.teamGroupBody').hide();
+				$('#'+$(this).attr('tabId')).show();
+			});
+		});
+	</script>
+</body>
+</html>
